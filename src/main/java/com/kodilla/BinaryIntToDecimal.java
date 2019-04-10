@@ -3,18 +3,37 @@ package com.kodilla;
 public class BinaryIntToDecimal {
 
     public static void main(String args[]) {
+
+        long start = System.nanoTime();
         int one = 1011110;
-        int two = 10;
-        int three = 11;
 
         char[] arrayOne = intToCharArray(one);
-        char[] arrayTwo = intToCharArray(two);
-        char[] arrayThree = intToCharArray(three);
+        charArrayToDecimalInt(arrayOne);
 
-        System.out.println("Liczba dwójkowa: " + one + " to: " + charArrayToDecimalInt(arrayOne) + " dziesiętnie");
-        System.out.println("Liczba dwójkowa: " + two + " to: " + charArrayToDecimalInt(arrayTwo) + " dziesiętnie");
-        System.out.println("Liczba dwójkowa: " + three + " to: " + charArrayToDecimalInt(arrayThree) + " dziesiętnie");
+        long end = System.nanoTime();
 
+        System.out.println(end - start);
+
+
+        start = System.nanoTime();
+        getDecimalFromBinary(1011110);
+        end = System.nanoTime();
+
+        System.out.println(end - start);
+    }
+
+
+    public static int getDecimalFromBinary(int binary) {
+        int result = 0;
+        int i = 0;
+
+        while (binary > 0) {
+
+            result = result + (binary % 10 * (int) Math.pow(2.0, i));
+            binary = binary / 10;
+            i++;
+        }
+        return result;
     }
 
 
