@@ -19,7 +19,8 @@ HELP.md
 *.ipr
 /out/
 
-**/out/ **/build/
+**\out\
+**\build\
 
 ### NetBeans ###
 /nbproject/private/
