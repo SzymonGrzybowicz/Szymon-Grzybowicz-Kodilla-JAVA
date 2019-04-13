@@ -28,7 +28,7 @@ public class CollectionTestSuite {
         List<Integer> result = OddNumbersExterminator.exterminate(list);
         System.out.println("Testing empty list");
         //Then
-        Assert.assertEquals(result, list);
+        Assert.assertEquals(list, result);
 
     }
 
@@ -62,7 +62,7 @@ public class CollectionTestSuite {
         System.out.println("Testing list with content");
 
         //Then
-        Assert.assertEquals(result, even);
+        Assert.assertEquals(even, result);
 
     }
 }

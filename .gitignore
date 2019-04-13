@@ -18,9 +18,8 @@ HELP.md
 *.iml
 *.ipr
 /out/
+/bulid/
 
-**\out\
-**\build\
 
 ### NetBeans ###
 /nbproject/private/
