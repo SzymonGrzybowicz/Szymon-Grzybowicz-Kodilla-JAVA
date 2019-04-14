@@ -17,8 +17,8 @@ HELP.md
 *.iws
 *.iml
 *.ipr
-**/out/
-**/bulid/
+**/out/*
+**/build/*
 
 
 ### NetBeans ###
