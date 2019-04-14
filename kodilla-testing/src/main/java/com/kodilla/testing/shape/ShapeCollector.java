@@ -16,7 +16,7 @@ public class ShapeCollector {
     }
 
     public Shape getShape(int n) {
-        if (list.size() == 0 || n < 0 || n > list.size()) {
+        if (list.isEmpty()|| n < 0 || n > list.size()) {
             return null;
         } else {
             return list.get(n);
@@ -26,7 +26,7 @@ public class ShapeCollector {
     }
 
     public String showFigures() {
-        if (list.size() == 0) {
+        if (list.isEmpty()) {
             return "There is no Figures!";
         } else {
             String result = "";
