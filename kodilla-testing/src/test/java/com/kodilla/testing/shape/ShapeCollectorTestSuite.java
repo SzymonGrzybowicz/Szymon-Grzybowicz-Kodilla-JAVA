@@ -108,7 +108,7 @@ public class ShapeCollectorTestSuite {
     }
 
     @Test
-    public void testGetShapeWithIndexOutOfBound(){
+    public void testGetShapeWithIndexOutOfBound() {
         //Given
         ShapeCollector collector = new ShapeCollector();
         Square square = new Square("squareOne", 2);
@@ -122,7 +122,7 @@ public class ShapeCollectorTestSuite {
     }
 
     @Test
-    public void testGetShapeWithNegativeIndex(){
+    public void testGetShapeWithNegativeIndex() {
         //Given
         ShapeCollector collector = new ShapeCollector();
         Square square = new Square("squareOne", 2);
@@ -134,7 +134,6 @@ public class ShapeCollectorTestSuite {
         //Then
         Assert.assertEquals(null, result);
     }
-
 
 
     @Test

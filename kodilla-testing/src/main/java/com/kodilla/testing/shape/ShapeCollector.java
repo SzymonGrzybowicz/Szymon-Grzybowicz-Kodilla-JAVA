@@ -1,40 +1,32 @@
 package com.kodilla.testing.shape;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
 public class ShapeCollector {
 
-    int numberOfElement;
     List<Shape> list = new LinkedList<>();
 
     public void addFigure(Shape shape) {
-        list.add(numberOfElement, shape);
-        numberOfElement++;
+        list.add(list.size(), shape);
     }
 
     public void removeFigure(Shape shape) {
         list.remove(shape);
-        if (numberOfElement > 0) {
-            numberOfElement--;
-        }
-
     }
 
     public Shape getShape(int n) {
-        if (numberOfElement == 0 || n < 0 || n > numberOfElement) {
+        if (list.size() == 0 || n < 0 || n > list.size()) {
             return null;
         } else {
             return list.get(n);
         }
 
 
-
     }
 
     public String showFigures() {
-        if (numberOfElement == 0) {
+        if (list.size() == 0) {
             return "There is no Figures!";
         } else {
             String result = "";
@@ -46,6 +38,6 @@ public class ShapeCollector {
     }
 
     public int getNumberOfElement() {
-        return numberOfElement;
+        return list.size();
     }
 }
