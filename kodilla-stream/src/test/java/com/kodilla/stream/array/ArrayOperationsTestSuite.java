@@ -1,5 +1,6 @@
 package com.kodilla.stream.array;
 
+import javafx.beans.binding.When;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -26,5 +27,20 @@ public class ArrayOperationsTestSuite {
         //Then
 
         Assert.assertEquals(9.5, result, 0.001);
+    }
+
+    @Test
+    public void testGetAverageEmptyArray(){
+
+        //Given
+        int[] array = new int[0];
+
+
+        //When
+
+        double result = ArrayOperations.getAverage(array);
+
+        //Then
+        Assert.assertEquals(0, result, 0);
     }
 }
