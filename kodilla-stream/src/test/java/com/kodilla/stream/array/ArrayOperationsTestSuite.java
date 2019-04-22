@@ -5,6 +5,9 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.Optional;
+import java.util.OptionalDouble;
+
 public class ArrayOperationsTestSuite {
 
     private static int i;
@@ -38,7 +41,7 @@ public class ArrayOperationsTestSuite {
 
         //When
 
-        double result = ArrayOperations.getAverage(array);
+        double result =  ArrayOperations.getAverage(array);
 
         //Then
         Assert.assertEquals(0, result, 0);
