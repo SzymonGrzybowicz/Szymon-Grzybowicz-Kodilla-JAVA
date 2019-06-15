@@ -2,8 +2,8 @@ package com.kodilla.good.patterns.challenges.order;
 
 public class GameProduct implements Product {
 
-    String name;
-    boolean isAvailable;
+    private String name;
+    private boolean isAvailable;
 
     public GameProduct(String name) {
         this.name = name;

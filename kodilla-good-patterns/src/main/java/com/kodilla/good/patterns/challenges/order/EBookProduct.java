@@ -3,8 +3,8 @@ package com.kodilla.good.patterns.challenges.order;
 public class EBookProduct implements Product {
 
 
-    String name;
-    boolean isAvailable;
+    private String name;
+    private boolean isAvailable;
 
 
     public EBookProduct(String name) {
