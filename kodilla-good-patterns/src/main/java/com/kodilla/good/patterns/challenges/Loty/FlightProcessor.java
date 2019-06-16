@@ -41,7 +41,7 @@ public class FlightProcessor {
 
         for (Flight flightToDestination : flightsToDestination) {
             for (Flight firstFlight : flights) {
-                if (firstFlight.getDestination() == flightToDestination.getFrom()) {
+                if (firstFlight.getDestination().equals(flightToDestination.getFrom())) {
                     result.add(new FlightWithIntermediate(firstFlight, flightToDestination));
 
                 }
