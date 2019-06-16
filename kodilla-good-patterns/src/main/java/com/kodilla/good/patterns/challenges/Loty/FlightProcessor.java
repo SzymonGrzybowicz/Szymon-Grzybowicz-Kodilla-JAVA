@@ -1,5 +1,6 @@
 package com.kodilla.good.patterns.challenges.Loty;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -28,12 +29,24 @@ public class FlightProcessor {
         return result;
     }
 
-    public List<Flight> findFlightWithIntermediateStation(String from, String destination, String intermediateStation) {
-        List<Flight> result = flights.stream()
+    public List<FlightWithIntermediate> findFlightWithIntermediateStation(String from, String destination, String intermediateStation) {
+
+        List result = new ArrayList();
+
+
+        List<Flight> flightsToDestination = flights.stream()
                 .filter(f -> f.getDestination().equals(destination))
-                .filter(f -> f.getFrom().equals(from))
-                .filter(f -> f.getIntermediateStation().equals(intermediateStation))
                 .collect(Collectors.toList());
+
+
+        for (Flight flightToDestination : flightsToDestination) {
+            for (Flight firstFlight : flights) {
+                if (firstFlight.getDestination() == flightToDestination.getFrom()) {
+                    result.add(new FlightWithIntermediate(firstFlight, flightToDestination));
+
+                }
+            }
+        }
 
         return result;
     }

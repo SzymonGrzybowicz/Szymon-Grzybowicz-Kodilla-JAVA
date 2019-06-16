@@ -7,16 +7,14 @@ public class Flight {
     private LocalDateTime departureTime;
     private String destination;
     private String from;
-    private String intermediateStation;
     private int flightID;
 
-    public Flight(LocalDateTime arriveTime, LocalDateTime departureTime, String destination, String from, int flightID, String intermediateStation) {
+    public Flight(LocalDateTime arriveTime, LocalDateTime departureTime, String destination, String from, int flightID) {
         this.arriveTime = arriveTime;
         this.departureTime = departureTime;
         this.destination = destination;
         this.from = from;
         this.flightID = flightID;
-        this.intermediateStation = intermediateStation;
     }
 
     public String getDestination() {
@@ -25,10 +23,6 @@ public class Flight {
 
     public String getFrom() {
         return from;
-    }
-
-    public String getIntermediateStation() {
-        return intermediateStation;
     }
 
     @Override
