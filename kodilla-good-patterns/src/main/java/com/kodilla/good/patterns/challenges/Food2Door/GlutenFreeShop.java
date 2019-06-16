@@ -1,9 +1,9 @@
 package com.kodilla.good.patterns.challenges.Food2Door;
 
-public class GlutenFreeShop implements Producer{
+public class GlutenFreeShop implements Producer {
 
-    OrderInformation orderInformation;
-    boolean orderFinished = false;
+    private OrderInformation orderInformation;
+    private boolean orderFinished = false;
 
     public GlutenFreeShop(OrderInformation orderInformation) {
         this.orderInformation = orderInformation;
@@ -23,7 +23,7 @@ public class GlutenFreeShop implements Producer{
 
     @Override
     public boolean orderFinished() {
-        return  orderFinished;
+        return orderFinished;
 
     }
 }

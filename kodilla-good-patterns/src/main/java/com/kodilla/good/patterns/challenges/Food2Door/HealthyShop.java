@@ -1,8 +1,9 @@
 package com.kodilla.good.patterns.challenges.Food2Door;
 
 public class HealthyShop implements Producer {
-    OrderInformation orderInformation;
-    boolean orderFinished = false;
+
+    private OrderInformation orderInformation;
+    private boolean orderFinished = false;
 
     public HealthyShop(OrderInformation orderInformation) {
         this.orderInformation = orderInformation;
@@ -22,7 +23,7 @@ public class HealthyShop implements Producer {
 
     @Override
     public boolean orderFinished() {
-        return  orderFinished;
+        return orderFinished;
 
     }
 }
