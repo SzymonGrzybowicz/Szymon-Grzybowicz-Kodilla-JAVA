@@ -1,10 +1,5 @@
 package com.kodilla.spring.library;
 
-import org.springframework.stereotype.Repository;
-
-import java.util.ArrayList;
-
-@Repository
 public final class LibraryDbController {
     public void saveData() {
         System.out.println("Saving data to the database.");
