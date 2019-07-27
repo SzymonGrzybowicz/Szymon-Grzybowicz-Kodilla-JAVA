@@ -1,12 +1,9 @@
 package com.kodilla.stream.array;
 
-import javafx.beans.binding.When;
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-
-import java.util.Optional;
-import java.util.OptionalDouble;
 
 public class ArrayOperationsTestSuite {
 
