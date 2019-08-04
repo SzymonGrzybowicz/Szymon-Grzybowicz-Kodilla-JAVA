@@ -10,10 +10,10 @@ public class Item {
 
     private int id;
     private Product product;
-    BigDecimal price;
-    int quantity;
-    BigDecimal value;
-    Invoice invoice;
+    private BigDecimal price;
+    private int quantity;
+    private BigDecimal value;
+    private Invoice invoice;
 
     public Item(BigDecimal price, int quantity, BigDecimal value) {
         this.price = price;
