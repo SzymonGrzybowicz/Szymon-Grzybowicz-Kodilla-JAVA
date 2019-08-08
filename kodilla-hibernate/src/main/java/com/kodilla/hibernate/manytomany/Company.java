@@ -7,7 +7,7 @@ import java.util.List;
 
 @NamedNativeQuery(
         name = "Company.retrieveCompanyWithNameStartsWith",
-        query = "SELECT * FROM companies where company_name LIKE CONCAT(:SUBSTRING, '%')",
+        query = "SELECT * FROM companies where company_name LIKE CONCAT(LEFT(:SUBSTRING, 3), '%')",
         resultClass = Company.class
 )
 @Entity

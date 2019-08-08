@@ -93,7 +93,7 @@ public class CompanyDaoTestSuite {
         companyDao.save(dataMaesters);
         companyDao.save(greyMatter);
 
-        List<Company> companiesStartsWithData = companyDao.retrieveCompanyWithNameStartsWith("data");
+        List<Company> companiesStartsWithData = companyDao.retrieveCompanyWithNameStartsWith("dat");
         List<Employee> employeesWithLastnameSmith = employeeDao.getEmployeeByLastname("Smith");
 
         //Then
