@@ -80,10 +80,10 @@ public class RpsLogic {
 
     private void newGame() {
         turnNumbers = 0;
-        System.out.println("Podaj ilość wygranych rund by wygrać.");
+        System.out.println("Podaj ilość wygranych rund by wygrać. (MAX 99)");
         String numbersFromScanner = scanner.next();
-        while (!(numbersFromScanner.chars().allMatch(Character::isDigit) && Integer.parseInt(numbersFromScanner) > 0)) {
-            System.out.println("Podano niewłaściwą liczbę. Podaj ilość wygranych rund by wygrać.");
+        while (!(numbersFromScanner.chars().allMatch(Character::isDigit) && numbersFromScanner.length() < 3 && Integer.parseInt(numbersFromScanner) > 0)) {
+            System.out.println("Podano niewłaściwą liczbę. Podaj ilość wygranych rund by wygrać.(MAX 99)");
             numbersFromScanner = scanner.next();
         }
         turnNumbers = Integer.parseInt(numbersFromScanner);
