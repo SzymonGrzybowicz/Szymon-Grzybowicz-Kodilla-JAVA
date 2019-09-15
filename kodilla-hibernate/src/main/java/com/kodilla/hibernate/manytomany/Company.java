@@ -10,6 +10,11 @@ import java.util.List;
         query = "SELECT * FROM companies where company_name LIKE CONCAT(LEFT(:SUBSTRING, 3), '%')",
         resultClass = Company.class
 )
+@NamedNativeQuery(
+        name = "Company.retrieveCompanyWithNameHaveSubstring",
+        query = "SELECT * FROM companies where company_name LIKE CONCAT('%', :SUBSTRING, '%')",
+        resultClass = Company.class
+)
 @Entity
 @Table(name = "COMPANIES")
 public class Company {

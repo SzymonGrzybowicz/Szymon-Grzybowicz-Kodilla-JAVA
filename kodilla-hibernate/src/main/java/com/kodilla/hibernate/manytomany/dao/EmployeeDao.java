@@ -9,6 +9,8 @@ import java.util.List;
 
 @Repository
 @Transactional
-interface EmployeeDao extends CrudRepository<Employee, Integer> {
+public interface EmployeeDao extends CrudRepository<Employee, Integer> {
     List<Employee> getEmployeeByLastname(@Param("LASTNAME") String lastname);
+
+    List<Employee> getEmployeeWithNameHaveSubstring(@Param("SUBSTRING") String substring);
 }
