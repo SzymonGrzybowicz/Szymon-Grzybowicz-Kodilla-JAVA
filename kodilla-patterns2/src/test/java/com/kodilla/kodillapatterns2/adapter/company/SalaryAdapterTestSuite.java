@@ -15,6 +15,6 @@ public class SalaryAdapterTestSuite {
         double totalSalary = salaryAdapter.TotalSalary(workers.getWorkers(), workers.getSalaries());
         //Then
         System.out.println(totalSalary);
-        Assert.assertEquals(totalSalary, 27750, 0);
+        Assert.assertEquals(27750, totalSalary, 0);
     }
 }
